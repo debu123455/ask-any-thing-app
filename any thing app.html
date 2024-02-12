@@ -11,6 +11,7 @@
 *{
     padding: 10px;
     margin: 10px;
+    box-sizing: border-box;
 }
 
 body{
@@ -45,17 +46,71 @@ body{
     padding-left: 640px;
     box-sizing: border-box;
     font-size: 30px;
+
+    
     
 
 
 }
-.hover :hover{
-    background-color: aqua;
+.magic-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #4CAF50;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.magic-button:before,
+.magic-button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.magic-button:before {
+  background-color: #900808;
+  transform: scaleX(1.05) scaleY(1.02);
+  z-index: -1;
+}
+
+.magic-button:after {
+  background-color: #1b5e20;
+  transform: scaleX(1.1) scaleY(1.12) translateZ(-10px);
+  z-index: -2;
+  filter: blur(5px);
+}
+
+.magic-button:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+}
+
+.magic-button:hover:before {
+  transform: scaleX(1.1) scaleY(1.12);
+}
+
+.magic-button:hover:after {
+  transform: scaleX(1.2) scaleY(1.25) translateZ(-15px);
+}
+  
+  
 
     
 
 
-}
+
+
 
   </style>
 </head>
@@ -70,12 +125,14 @@ body{
     <div class="ser">
   <input type="text" id="word-input" placeholder="Enter a word...">
     
-<div class ="hover">
-  <button onclick="getMeaning()">Search</button>
+<div class="magic-button" >
+  <button  onclick= "getMeaning()">Search</button>
+  
 </div>
   </div>
     
-  <div id="result"></div>
+  <div id="result">
+  </div>
 
 
   <script>
@@ -93,6 +150,7 @@ async function getMeaning() {
     result.innerText = `
       Word:- ${data[0].word}
       Definition:-${data[0].meanings[0].definitions[0].definition}
+      
      
     `;
   }
@@ -106,3 +164,5 @@ input.addEventListener("keyup", e => {
   </script>
 </body>
 </html>
+
+
