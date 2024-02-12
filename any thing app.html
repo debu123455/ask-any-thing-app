@@ -1,0 +1,108 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ask me anything</title>
+
+  <style>
+
+
+*{
+    padding: 10px;
+    margin: 10px;
+}
+
+body{
+    padding: o;
+    margin: o;
+    background-color:black;
+    color: bisque;
+}
+.container{
+    color: black;
+    font-size: 100px;
+    margin: 10px,20px,10px,20px;
+    text-justify: auto;
+    text-align: center;
+   
+    
+}
+.container h1{
+    color:transparent;
+    font-size: 140px;
+    margin: 10px,20px,10px,20px;
+    text-justify: auto;
+    text-align: center;
+    font-weight: 800px;
+    background-image: url("https://images.unsplash.com/photo-1453748866136-b1dd97284f49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRpY3Rpb25hcnl8ZW58MHx8MHx8fDA%3D");
+    -webkit-background-clip: text;
+
+
+}
+.ser{
+    align-items: center;
+    padding-left: 640px;
+    box-sizing: border-box;
+    font-size: 30px;
+    
+
+
+}
+.hover :hover{
+    background-color: aqua;
+
+    
+
+
+}
+
+  </style>
+</head>
+
+
+<body>
+    <div class ="container">
+        
+    <h1>ASK ME 
+        ANYTHING</h1>
+    </div>
+    <div class="ser">
+  <input type="text" id="word-input" placeholder="Enter a word...">
+    
+<div class ="hover">
+  <button onclick="getMeaning()">Search</button>
+</div>
+  </div>
+    
+  <div id="result"></div>
+
+
+  <script>
+    const input = document.getElementById("word-input");
+const result = document.getElementById("result");
+
+async function getMeaning() {
+  const word = input.value;
+  const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+  const data = await response.json();
+
+  if (data.title) {
+    result.innerText = `Can't find the meaning of "${word}". Please, try another word.`;
+  } else {
+    result.innerText = `
+      Word:- ${data[0].word}
+      Definition:-${data[0].meanings[0].definitions[0].definition}
+     
+    `;
+  }
+}
+
+input.addEventListener("keyup", e => {
+  if (e.key === "Enter") {
+    getMeaning();
+  }
+});
+  </script>
+</body>
+</html>
