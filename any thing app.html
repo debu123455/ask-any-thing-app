@@ -2,314 +2,7 @@
 <html>
 <head>
   <title>Ask me anything</title>
-
-  <style>
-
-
-*{
-    padding: 10px;
-    margin: 10px;
-    box-sizing: border-box;
-}
-
-body{
-    padding: o;
-    margin: o;
-    background-color:black;
-    color: bisque;
-}
-.container{
-    color: black;
-    font-size: 100px;
-    margin: 10px,20px,10px,20px;
-    text-justify: auto;
-    text-align: center;
-   
-    
-}
-.container h1{
-    color:transparent;
-    font-size: 140px;
-    margin: 10px,20px,10px,20px;
-    text-justify: auto;
-    text-align: center;
-    font-weight: 800px;
-    background-image: url("https://images.unsplash.com/photo-1453748866136-b1dd97284f49?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGRpY3Rpb25hcnl8ZW58MHx8MHx8fDA%3D");
-    -webkit-background-clip: text;
-
-
-}
-.ser{
-    align-items: center;
-    padding-left: 640px;
-    box-sizing: border-box;
-    font-size: 30px;
-    width: 200px;
-
-    
-    
-
-
-}
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 13rem;
-  overflow: hidden;
-  height: 3rem;
-  background-size: 300% 300%;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-  transition: 0.5s;
-  animation: gradient_301 5s ease infinite;
-  border: double 4px transparent;
-  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-#container-stars {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-}
-
-strong {
-  z-index: 2;
-  font-family: 'Avalors Personal Use';
-  font-size: 12px;
-  letter-spacing: 5px;
-  color: #FFFFFF;
-  text-shadow: 0 0 4px white;
-}
-
-#glow {
-  position: absolute;
-  display: flex;
-  width: 12rem;
-}
-
-.circle {
-  width: 100%;
-  height: 30px;
-  filter: blur(2rem);
-  animation: pulse_3011 4s infinite;
-  z-index: -1;
-}
-
-.circle:nth-of-type(1) {
-  background: rgba(254, 83, 186, 0.636);
-}
-
-.circle:nth-of-type(2) {
-  background: rgba(142, 81, 234, 0.704);
-}
-
-.btn:hover #container-stars {
-  z-index: 1;
-  background-color: #212121;
-}
-
-.btn:hover {
-  transform: scale(1.1)
-}
-
-.btn:active {
-  border: double 4px #FE53BB;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: none;
-}
-
-.btn:active .circle {
-  background: #FE53BB;
-}
-
-#stars {
-  position: relative;
-  background: transparent;
-  width: 200rem;
-  height: 200rem;
-}
-
-#stars::after {
-  content: "";
-  position: absolute;
-  top: -10rem;
-  left: -100rem;
-  width: 100%;
-  height: 100%;
-  animation: animStarRotate 90s linear infinite;
-}
-
-#stars::after {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-}
-
-#stars::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 170%;
-  height: 500%;
-  animation: animStar 60s linear infinite;
-}
-
-#stars::before {
-  background-image: radial-gradient(#ffffff 1px, transparent 1%);
-  background-size: 50px 50px;
-  opacity: 0.5;
-}
-
-@keyframes animStar {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(-135rem);
-  }
-}
-
-@keyframes animStarRotate {
-  from {
-    transform: rotate(360deg);
-  }
-
-  to {
-    transform: rotate(0);
-  }
-}
-
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pulse_3011 {
-  0% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-.one-div {
-  width: 300px;
-  height: 200px;
-  display: grid;
-  position: relative;
-  margin: auto 0 0;
-  background: radial-gradient(circle 44px at top,#0000 94%,#5dc1e4) 0 40px, radial-gradient(circle 44px at top,#0000 94%,#008cd9) 0 0;
-  background-size: 80px 100%;
-  background-repeat: repeat-x;
-  animation: a 1s infinite linear;
-  border-radius: 500px;
-  transition: height 1s;
-  cursor: pointer;
-  margin-left: 600px;
-}
-
-.one-div:hover {
-  height: 100px;
-
-}
-
-.one-div:before {
-  content: "";
-  width: 100%;
-  z-index: 1;
-  background: radial-gradient(circle 44px at top,#0000 94%,#b0e5f3) 0 70px;
-  background-size: 80px 100%;
-  background-repeat: repeat-x;
-  animation: b 1s infinite linear;
-  border-radius: 1000px;
-  
-}
-
-.one-div:after {
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 150px;
-  background: linear-gradient(#f0caa3 0 0) bottom/16% 67%, linear-gradient(#33b54d 0 0) 50% 50%/54% 12%, radial-gradient(farthest-side at bottom left,#33b54d 98%,#0000) 100% 48%/25% 12%, radial-gradient(farthest-side at bottom right,#33b54d 98%,#0000) 0 48%/25% 12%, radial-gradient(farthest-side at top left,#0000 98%,#33b54d) 16% 30%/31% 20%, radial-gradient(farthest-side at top right,#0000 98%,#33b54d) 87% 30%/31% 20%, linear-gradient(#a87d53 0 0) top/20% 8%,linear-gradient(#33b54d 0 0)50% 7%/37% 8%, linear-gradient(#33b54d 0 0) bottom/100% 50%, linear-gradient(#33b54d 0 0) center/20% 100%;
-  background-repeat: no-repeat;
-  border-radius: 0 0 20px 20px;
-  left: calc(50% - 35px);
-  top: 0px;
-  transform: rotate(45deg);
-  animation: c 1s infinite linear;
-  
-}
-
-@keyframes a {
-  50% {
-    background-position: -40px 15px,45px 10px
-  }
-
-  100% {
-    background-position: -80px 40px,80px 0px
-  }
-}
-
-@keyframes b {
-  50% {
-    background-position: 40px 45px
-  }
-
-  100% {
-    background-position: 80px 70px
-  }
-}
-
-@keyframes c {
-  0%,100% {
-    transform: translate(0,0) rotate(40deg)
-  }
-
-  33% {
-    transform: translate(10px,-20px) rotate(50deg)
-  }
-
-  66% {
-    transform: translate(5px,-10px) rotate(30deg)
-  }
-}
-
-    
-
-
-
-
-
-  </style>
-</head>
-
+  <link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
     <div class ="container">
@@ -317,11 +10,21 @@ strong {
     <h1>ASK ME 
         ANYTHING</h1>
     </div>
-    <div class="ser">
-  <input type="text" id="word-input" placeholder="Enter a word...">
+    
+
+    <div class="input__container">
+      <div class="shadow__input"></div>
+      <button class="input__button__shadow">
+        <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" height="20px" width="20px">
+          <path d="M4 9a5 5 0 1110 0A5 5 0 014 9zm5-7a7 7 0 104.2 12.6.999.999 0 00.093.107l3 3a1 1 0 001.414-1.414l-3-3a.999.999 0 00-.107-.093A7 7 0 009 2z" fill-rule="evenodd" fill="#17202A"></path>
+        </svg>
+      </button>
+      <input type="text" name="text"  id ="input" class="input__search" placeholder="SEARCH YOUR WORD">
+    </div>
+    
     
   <button class="btn" type="button">
-    <strong onclick= "getMeaning()">search</strong>
+    <strong onclick= "getMeaning()">SEARCH</strong>
     <div id="container-stars">
       <div id="stars"></div>
     </div>
@@ -341,34 +44,9 @@ strong {
   </div>
   <div class="one-div"></div>
   
+  
 
 
-  <script>
-    const input = document.getElementById("word-input");
-const result = document.getElementById("result");
-
-async function getMeaning() {
-  const word = input.value;
-  const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
-  const data = await response.json();
-
-  if (data.title) {
-    result.innerText = `Can't find the meaning of "${word}". Please, try another word.`;
-  } else {
-    result.innerText = `
-      Word:- ${data[0].word}
-      Definition:-${data[0].meanings[0].definitions[0].definition}
-      
-     
-    `;
-  }
-}
-
-input.addEventListener("keyup", e => {
-  if (e.key === "Enter") {
-    getMeaning();
-  }
-});
-  </script>
+  <script src="style.js"></script>
 </body>
 </html>
